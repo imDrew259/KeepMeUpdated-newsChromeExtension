@@ -1,2 +1,2 @@
 # news-chrome-extension
-A News Chrome Extension Build To Fetch Live Breaking News.
+A chrome extension build to fetch live top headlines of the country using the news API.
