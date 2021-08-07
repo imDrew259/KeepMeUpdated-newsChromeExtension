@@ -7,5 +7,5 @@
         "default_icon": "newsicon.png", 
         "default_popup": "popup.html" 
     },
-    "permissions": ["http://newsapi.org/v2/top-headlines"]
+    "permissions": ["http://newsapi.org/v2"]
 }
