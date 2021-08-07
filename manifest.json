@@ -1,0 +1,11 @@
+{
+    "name": "News-Extension",
+    "version": "0.1",
+    "description": "An extension to get daily News",
+    "manifest_version": 2,
+    "browser_action":{
+        "default_icon": "newsicon.png", 
+        "default_popup": "popup.html" 
+    },
+    "permissions": ["http://newsapi.org/v2/top-headlines?country=in&apiKey=c61e4bf1368248c6ad39d4c2311ae826"]
+}
