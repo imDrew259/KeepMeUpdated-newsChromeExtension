@@ -18,9 +18,6 @@ function showNews(dataArray){
         let li = document.createElement("li");
 
         let titleNode = document.createTextNode(dataItem.title);
-        let content = dataItem.description;
-        if(content!=null && content.length > 170) content = content.substr(0,150) + "...";
-        let contentNode = document.createTextNode(content);
 
         let aTag = document.createElement('a');
         aTag.setAttribute('href',dataItem.url);
@@ -29,14 +26,20 @@ function showNews(dataArray){
 
         let img = document.createElement('img');
         img.setAttribute('src',dataItem.urlToImage);
-
-        let span = document.createElement('SPAN');
-        span.appendChild(contentNode);
-
+        img.setAttribute('alt'," Image Not Available")
         li.appendChild(img);
+        
         li.appendChild(aTag);
-        li.appendChild(span);
 
+        if(dataItem.description!=null){
+            let content = dataItem.description;
+            if(content.length > 170) content = content.substr(0,150) + "...";
+            let contentNode = document.createTextNode(content);
+            let span = document.createElement('SPAN');
+            span.appendChild(contentNode);
+            li.appendChild(span);
+        }
+      
         let  ul = document.getElementById('listItems');
         ul.appendChild(li);
     })
